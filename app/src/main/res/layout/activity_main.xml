@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<WebView
+		android:id="@+id/webview"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:visibility="gone" />
+
+	<ProgressBar
+		android:id="@+id/progressBar"
+		style="?android:attr/progressBarStyleHorizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentTop="true"
+		android:visibility="gone" />
+
+	<com.termux.view.TerminalView
+		android:background="#000000"
+		android:id="@+id/terminal_view"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_above="@id/extra_keys"
+		android:focusableInTouchMode="true"
+		android:scrollbarThumbVertical="@drawable/terminal_scroll_shape"
+		android:scrollbars="vertical"
+		tools:ignore="SpeakableTextPresentCheck" />
+
+	<com.termux.view.ExtraKeysView
+		android:id="@+id/extra_keys"
+		style="?android:attr/buttonBarStyle"
+		android:layout_width="match_parent"
+		android:layout_height="80dp"
+		android:layout_alignParentBottom="true"
+		android:background="#000000"
+		android:orientation="horizontal"
+		tools:ignore="TextSizeCheck" />
+
+</RelativeLayout>
